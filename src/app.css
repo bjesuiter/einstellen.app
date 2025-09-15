@@ -6,10 +6,10 @@
   --color-primary-dark: #0180D6;
 
   --color-surface-main-light: #FFFFFF;
-  --color-surface-main-dark: #121212;
+  --color-surface-main-dark: var(--color-gray-900);
 
   --color-surface-secondary-light: #EEEEEE;
-  --color-surface-secondary-dark: #272727;
+  --color-surface-secondary-dark: var(--color-gray-800);
 
   --color-foreground-light: var(--color-gray-700);
   --color-foreground-dark: var(--color-gray-300);

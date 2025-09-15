@@ -1,11 +1,10 @@
-import { createRootRoute, getRouteApi, HeadContent, Outlet } from "@tanstack/solid-router";
+import { createRootRoute, HeadContent, Outlet } from "@tanstack/solid-router";
 
 import { clientOnly } from "@solidjs/start";
-import { ClerkLoaded, ClerkLoading, ClerkProvider, SignedIn, SignedOut, SignOutButton } from 'clerk-solidjs';
+import { ClerkProvider } from 'clerk-solidjs';
 import { Suspense } from "solid-js";
 import { Portal } from 'solid-js/web';
 import { ClerkLoginWrapper } from '~/components/ClerkLoginWrapper';
-import SineWave from '~/components/SineWave';
 import { getClerkPublishableKey, getIsRunningOnDenoDeploy, getStage } from '~/server/serverInfo';
 
 

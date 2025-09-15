@@ -8,34 +8,27 @@ import {
 } from "clerk-solidjs";
 import { JSX } from "solid-js";
 import SineWave from "./SineWave";
+import { LoginLayout } from './layout/LoginLayout';
 
 export function ClerkLoginWrapper(
     { children }: { children: JSX.Element | JSX.Element[] | string },
 ) {
-    const LoginLayout = ({ title }: { title: string }) => {
-        return (
-            <div class="flex flex-col justify-center items-center h-[100dvh] bg-surface-secondary-light dark:bg-surface-secondary-dark">
-                <div class="shadow-lg rounded-lg border-solid border-neutral-300 dark:border-neutral-700 border-2 bg-surface-main-light dark:bg-surface-main-dark text-foreground-light dark:text-foreground-dark flex flex-col gap-4 pb-6">
-                    <SineWave className="mt-2" />
-                    <h1 class="text-2xl font-bold text-center">{title}</h1>
-                    <SignInButton class='border-solid border-gray-500 border-2 rounded-lg p-2 self-center' />
-                </div>
-            </div>
-        );
-    };
+
+    const clerkButtonClasses = `border-solid border-surface-secondary-dark dark:border-primary-dark/50 border-2 rounded-4xl px-8 py-4 self-center hover:cursor-pointer hover:ring-2 hover:dark:ring-primary hover:ring-primary hover:text-primary hover:border-transparent transition-all duration-200 font-bold`;
 
     return (
-        <div>
+        // main "body" styles for login and main page go here
+        <div class="bg-surface-secondary-light dark:bg-surface-secondary-dark h-[100dvh] w-[100dvw] text-foreground-light dark:text-foreground-dark overflow-y-auto">
             <ClerkLoading>
-                <LoginLayout title="Loading Clerk..." />
+                <LoginLayout title="Loading Clerk..." clerkButtonClasses={clerkButtonClasses}/>
             </ClerkLoading>
             <ClerkLoaded>
                 <SignedIn>
-                    <SignOutButton />
+                    <SignOutButton class={clerkButtonClasses} />
                     {children}
                 </SignedIn>
                 <SignedOut>
-                    <LoginLayout title="Login to einstellen.app" />
+                    <LoginLayout title="Login to einstellen.app" clerkButtonClasses={clerkButtonClasses} />
                 </SignedOut>
             </ClerkLoaded>
         </div>
