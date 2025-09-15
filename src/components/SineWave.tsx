@@ -49,7 +49,7 @@ export default function SineWave() {
     <svg width={WIDTH} height={HEIGHT} style={{ "background": "#222" }}>
       <path
         d={path()}
-        stroke="#31D8FF"
+        stroke="var(--color-primary)"
         stroke-width="3"
         fill="none"
         stroke-linecap="round"
