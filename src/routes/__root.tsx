@@ -40,9 +40,7 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
-
-  const routeData = getRouteApi('__root__'); 
-  const clerkPublishableKey = routeData.useLoaderData()().clerkPublishableKey;
+  const clerkPublishableKey = Route.useLoaderData()().clerkPublishableKey;
 
   return (
     <ClerkProvider publishableKey={clerkPublishableKey}>
