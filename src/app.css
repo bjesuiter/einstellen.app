@@ -11,7 +11,7 @@
   --color-surface-secondary-light: #EEEEEE;
   --color-surface-secondary-dark: #272727;
 
-  --color-foreground-light: #000000;
-  --color-foreground-dark: #FFFFFF;
+  --color-foreground-light: var(--color-gray-700);
+  --color-foreground-dark: var(--color-gray-300);
 }
 

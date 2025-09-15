@@ -12,6 +12,7 @@
     "npm:clerk-solidjs@^2.0.10": "2.0.10_@solidjs+router@0.15.3__solid-js@1.9.9___seroval@1.3.2_@solidjs+start@1.1.7__vinxi@0.5.8___@babel+core@7.28.4___@types+node@24.3.1__seroval@1.3.2__solid-js@1.9.9___seroval@1.3.2__@types+node@24.3.1_solid-js@1.9.9__seroval@1.3.2_vinxi@0.5.8__@babel+core@7.28.4__@types+node@24.3.1_@types+node@24.3.1",
     "npm:prettier@^3.6.2": "3.6.2",
     "npm:solid-js@^1.9.5": "1.9.9_seroval@1.3.2",
+    "npm:tailwind-merge@^3.3.1": "3.3.1",
     "npm:tailwindcss@^4.1.13": "4.1.13",
     "npm:valibot@^1.1.0": "1.1.0",
     "npm:vinxi@~0.5.7": "0.5.8_@babel+core@7.28.4_@types+node@24.3.1"
@@ -3957,6 +3958,9 @@
     "tabbable@6.2.0": {
       "integrity": "sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew=="
     },
+    "tailwind-merge@3.3.1": {
+      "integrity": "sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g=="
+    },
     "tailwindcss@4.1.13": {
       "integrity": "sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w=="
     },
@@ -4505,6 +4509,7 @@
         "npm:clerk-solidjs@^2.0.10",
         "npm:prettier@^3.6.2",
         "npm:solid-js@^1.9.5",
+        "npm:tailwind-merge@^3.3.1",
         "npm:tailwindcss@^4.1.13",
         "npm:valibot@^1.1.0",
         "npm:vinxi@~0.5.7"

@@ -4,7 +4,7 @@ import { clientOnly } from "@solidjs/start";
 import { ClerkLoaded, ClerkLoading, ClerkProvider, SignedIn, SignedOut, SignOutButton } from 'clerk-solidjs';
 import { Suspense } from "solid-js";
 import { Portal } from 'solid-js/web';
-import { LoginCard } from '~/components/LoginCard';
+import { ClerkLoginWrapper } from '~/components/ClerkLoginWrapper';
 import SineWave from '~/components/SineWave';
 import { getClerkPublishableKey, getIsRunningOnDenoDeploy, getStage } from '~/server/serverInfo';
 
@@ -56,21 +56,11 @@ function RootComponent() {
         <HeadContent />
       </Portal>
       <Suspense>
-        <ClerkLoading>
-          <div class='flex justify-center items-center h-[100dvh]'>
-            <div>Loading Clerk...</div>
-            <SineWave />
-          </div>
-        </ClerkLoading>
-        <ClerkLoaded>
-          <SignedIn>
-            <SignOutButton />
-            <Outlet />
-          </SignedIn>
-          <SignedOut>
-            <LoginCard />
-          </SignedOut>
-        </ClerkLoaded>
+
+      <ClerkLoginWrapper >
+        <Outlet />
+      </ClerkLoginWrapper>
+       
         <Devtools />
       </Suspense>
     </ClerkProvider>
