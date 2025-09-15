@@ -1,10 +1,12 @@
-import { HeadContent, Link, Outlet, createRootRoute, getRouteApi } from "@tanstack/solid-router";
+import { createRootRoute, getRouteApi, HeadContent, Outlet } from "@tanstack/solid-router";
 
 import { clientOnly } from "@solidjs/start";
+import { ClerkLoaded, ClerkLoading, ClerkProvider, SignedIn, SignedOut, SignOutButton } from 'clerk-solidjs';
 import { Suspense } from "solid-js";
 import { Portal } from 'solid-js/web';
-import { getStage, getIsRunningOnDenoDeploy, getClerkPublishableKey } from '~/server/serverInfo';
-import { ClerkLoaded, ClerkLoading, ClerkProvider, SignedIn, SignedOut, SignInButton } from 'clerk-solidjs';
+import { LoginCard } from '~/components/LoginCard';
+import SineWave from '~/components/SineWave';
+import { getClerkPublishableKey, getIsRunningOnDenoDeploy, getStage } from '~/server/serverInfo';
 
 
 const Devtools = clientOnly(() => import("../components/Devtools"));
@@ -55,14 +57,18 @@ function RootComponent() {
       </Portal>
       <Suspense>
         <ClerkLoading>
-          <div>Loading Clerk...</div>
+          <div class='flex justify-center items-center h-[100dvh]'>
+            <div>Loading Clerk...</div>
+            <SineWave />
+          </div>
         </ClerkLoading>
         <ClerkLoaded>
           <SignedIn>
+            <SignOutButton />
             <Outlet />
           </SignedIn>
           <SignedOut>
-            <SignInButton />
+            <LoginCard />
           </SignedOut>
         </ClerkLoaded>
         <Devtools />

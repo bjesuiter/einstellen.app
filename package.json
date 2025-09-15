@@ -10,12 +10,15 @@
   "dependencies": {
     "@clerk/backend": "^2.14.0",
     "@clerk/clerk-js": "^5.93.0",
+    "@tailwindcss/vite": "^4.1.13",
     "@tanstack/solid-router": "^1.114.1",
     "@tanstack/solid-router-devtools": "^1.114.1",
     "@tanstack/router-plugin": "^1.112.0",
     "@solidjs/start": "^1.1.2",
     "clerk-solidjs": "^2.0.10",
+    "prettier": "^3.6.2",
     "solid-js": "^1.9.5",
+    "tailwindcss": "^4.1.13",
     "valibot": "^1.1.0",
     "vinxi": "^0.5.7"
   },
