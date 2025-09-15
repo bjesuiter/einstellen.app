@@ -3,8 +3,8 @@ import * as v from "valibot";
 const EnvSchema = v.object({
     // Note: deno_deploy now denotes deno deploy EA 
     STAGE: v.optional(v.picklist(["local", "deno_deploy", "undefined"]), "undefined"),
-    ROOT_USER_EMAIL: v.pipe(v.string(), v.email()),
-    ROOT_USER_PASSWORD: v.string(),
+    // ROOT_USER_EMAIL: v.pipe(v.string(), v.email()),
+    // ROOT_USER_PASSWORD: v.string(),
 })
 
 function initEnvStore(envs: NodeJS.ProcessEnv) {
