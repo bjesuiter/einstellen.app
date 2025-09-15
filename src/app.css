@@ -15,3 +15,15 @@
   --color-foreground-dark: var(--color-gray-300);
 }
 
+
+/* TODO: improve view transitions with https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025#incrementally-adopt */
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  /* allow browsers to animate from 0 to keywords, like min-content, max-content and auto  */
+  /* CAUTION: Only supported by Chrome and derivate Browsers right now! */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size */
+  interpolate-size: allow-keywords;
+}
