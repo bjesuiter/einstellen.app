@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* TODO: install iconify package for solidjs to have icons in the app */
+
 @theme {
   /* Colors from bruno-groening.org */
   --color-primary: #39ADFF; 
