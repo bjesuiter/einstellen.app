@@ -10,4 +10,8 @@
 
   --color-surface-secondary-light: #EEEEEE;
   --color-surface-secondary-dark: #272727;
+
+  --color-foreground-light: #000000;
+  --color-foreground-dark: #FFFFFF;
 }
+
