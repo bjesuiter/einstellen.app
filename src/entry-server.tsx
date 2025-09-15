@@ -34,8 +34,8 @@ export default createHandler(
             <link rel="icon" href="/favicon.ico" />
             {assets}
           </head>
-          <body>
-            <div id="app">{children}</div>
+          <body class="bg-surface-secondary-light dark:bg-surface-secondary-dark h-[100dvh] w-[100dvw] text-foreground-light dark:text-foreground-dark overflow-y-auto">
+            <div id="app" class="h-full">{children}</div>
             {scripts}
           </body>
         </html>
