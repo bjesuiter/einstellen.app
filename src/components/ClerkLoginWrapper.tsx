@@ -2,13 +2,11 @@ import {
     ClerkLoaded,
     ClerkLoading,
     SignedIn,
-    SignedOut,
-    SignInButton,
-    SignOutButton,
+    SignedOut
 } from "clerk-solidjs";
 import { JSX } from "solid-js";
-import SineWave from "./SineWave";
 import { LoginLayout } from './layout/LoginLayout';
+import { MainLayout } from './layout/MainLayout';
 
 export function ClerkLoginWrapper(
     { children }: { children: JSX.Element | JSX.Element[] | string },
@@ -24,8 +22,9 @@ export function ClerkLoginWrapper(
             </ClerkLoading>
             <ClerkLoaded>
                 <SignedIn>
-                    <SignOutButton class={clerkButtonClasses} />
-                    {children}
+                    <MainLayout clerkButtonClasses={clerkButtonClasses}>
+                        {children}
+                    </MainLayout>
                 </SignedIn>
                 <SignedOut>
                     <LoginLayout title="Login to einstellen.app" clerkButtonClasses={clerkButtonClasses} />

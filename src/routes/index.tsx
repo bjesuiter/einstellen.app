@@ -8,9 +8,7 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   return (
-    <>
-      <Nav />
-      <main>
+    <main>
       <h1>Hello world!</h1>
       <Counter />
       <p>
@@ -20,7 +18,6 @@ function RouteComponent() {
         </a>{" "}
         to learn how to build SolidStart apps.
       </p>
-      </main>
-    </>
+    </main>
   );
 }
