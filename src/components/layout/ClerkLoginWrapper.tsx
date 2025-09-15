@@ -5,8 +5,8 @@ import {
     SignedOut
 } from "clerk-solidjs";
 import { JSX } from "solid-js";
-import { LoginLayout } from './layout/LoginLayout';
-import { MainLayout } from './layout/MainLayout';
+import { LoginLayout } from './LoginLayout';
+import { MainLayout } from './MainLayout';
 
 export function ClerkLoginWrapper(
     { children }: { children: JSX.Element | JSX.Element[] | string },

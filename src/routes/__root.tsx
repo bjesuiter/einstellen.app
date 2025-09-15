@@ -4,7 +4,7 @@ import { clientOnly } from "@solidjs/start";
 import { ClerkProvider } from 'clerk-solidjs';
 import { Suspense } from "solid-js";
 import { Portal } from 'solid-js/web';
-import { ClerkLoginWrapper } from '~/components/ClerkLoginWrapper';
+import { ClerkLoginWrapper } from '~/components/layout/ClerkLoginWrapper';
 import { getClerkPublishableKey, getIsRunningOnDenoDeploy, getStage } from '~/server/serverInfo';
 
 
