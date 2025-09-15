@@ -15,3 +15,7 @@ export async function getStage(): Promise<string> {
 export async function getIsRunningOnDenoDeploy(): Promise<boolean> {
   return envStore.STAGE === "deno_deploy";
 }
+
+export async function getClerkPublishableKey(): Promise<string> {
+  return envStore.VITE_CLERK_PUBLISHABLE_KEY;
+}

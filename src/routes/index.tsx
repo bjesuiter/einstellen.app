@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/solid-router";
 import Counter from "~/components/Counter";
+import { Nav } from '~/components/Nav';
 
 export const Route = createFileRoute("/")({
   component: RouteComponent, 
@@ -7,7 +8,9 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   return (
-    <main>
+    <>
+      <Nav />
+      <main>
       <h1>Hello world!</h1>
       <Counter />
       <p>
@@ -17,6 +20,7 @@ function RouteComponent() {
         </a>{" "}
         to learn how to build SolidStart apps.
       </p>
-    </main>
+      </main>
+    </>
   );
 }

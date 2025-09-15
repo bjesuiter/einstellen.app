@@ -4,6 +4,7 @@ import { tanstackRouter } from "@tanstack/router-plugin/vite";
 export default defineConfig({
   // TODO: check if this ssr: true even does anything
   ssr: true,
+  middleware: "src/global-middleware.ts",
   vite: {
     plugins: [tanstackRouter({
       target: "solid",
