@@ -1,4 +1,7 @@
+/* Note the "clerk" layer there, this is important to be able to override the clerk styles with tailwind classes */
+@layer theme, base, clerk, components, utilities;
 @import "tailwindcss";
+
 
 /* TODO: install iconify package for solidjs to have icons in the app */
 

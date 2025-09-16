@@ -42,7 +42,9 @@ function RootComponent() {
   const clerkPublishableKey = Route.useLoaderData()().clerkPublishableKey;
 
   return (
-    <ClerkProvider publishableKey={clerkPublishableKey}>
+    <ClerkProvider publishableKey={clerkPublishableKey} appearance={{
+      cssLayerName: "clerk"
+    }}>
     {/* 
       Note: This portals the (tanstack) HeadContent component into the "head" tag of the document, because 
       we cannot use the HeadContent component directly in the entry-server.tsx file because it needs to be below <RouterProvider /> in the tree. 

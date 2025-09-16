@@ -1,4 +1,4 @@
-import { SignOutButton } from "clerk-solidjs";
+import { UserButton } from "clerk-solidjs";
 import { JSX } from "solid-js/jsx-runtime";
 import { Nav } from "../Nav";
 
@@ -13,7 +13,13 @@ export function MainLayout(
 ) {
     return (
         <div class="flex flex-col h-full ">
-            <Nav slotRight={<SignOutButton class={clerkButtonClasses} />} />
+            <Nav slotRight={<UserButton appearance={
+                {
+                    elements: {
+                        userButtonAvatarBox: "size-11 shadow-md",
+                    }
+                }
+            } />} />
             {children}
         </div>
     );
