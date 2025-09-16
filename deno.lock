@@ -8,12 +8,15 @@
     "npm:@tanstack/router-plugin@^1.112.0": "1.131.36_@babel+core@7.28.4",
     "npm:@tanstack/solid-router-devtools@^1.114.1": "1.131.36_@tanstack+solid-router@1.131.36__solid-js@1.9.9___seroval@1.3.2_solid-js@1.9.9__seroval@1.3.2",
     "npm:@tanstack/solid-router@^1.114.1": "1.131.36_solid-js@1.9.9__seroval@1.3.2",
+    "npm:@trpc/client@^11.5.1": "11.5.1_@trpc+server@11.5.1__typescript@5.9.2_typescript@5.9.2",
+    "npm:@trpc/server@^11.5.1": "11.5.1_typescript@5.9.2",
     "npm:@types/node@^24.3.1": "24.3.1",
     "npm:clerk-solidjs@^2.0.10": "2.0.10_@solidjs+router@0.15.3__solid-js@1.9.9___seroval@1.3.2_@solidjs+start@1.1.7__vinxi@0.5.8___@babel+core@7.28.4___@types+node@24.3.1__seroval@1.3.2__solid-js@1.9.9___seroval@1.3.2__@types+node@24.3.1_solid-js@1.9.9__seroval@1.3.2_vinxi@0.5.8__@babel+core@7.28.4__@types+node@24.3.1_@types+node@24.3.1",
     "npm:prettier@^3.6.2": "3.6.2",
     "npm:solid-js@^1.9.5": "1.9.9_seroval@1.3.2",
     "npm:tailwind-merge@^3.3.1": "3.3.1",
     "npm:tailwindcss@^4.1.13": "4.1.13",
+    "npm:tslog@^4.9.3": "4.9.3",
     "npm:valibot@^1.1.0": "1.1.0",
     "npm:vinxi@~0.5.7": "0.5.8_@babel+core@7.28.4_@types+node@24.3.1"
   },
@@ -1576,6 +1579,19 @@
     },
     "@tanstack/virtual-file-routes@1.131.2": {
       "integrity": "sha512-VEEOxc4mvyu67O+Bl0APtYjwcNRcL9it9B4HKbNgcBTIOEalhk+ufBl4kiqc8WP1sx1+NAaiS+3CcJBhrqaSRg=="
+    },
+    "@trpc/client@11.5.1_@trpc+server@11.5.1__typescript@5.9.2_typescript@5.9.2": {
+      "integrity": "sha512-7I6JJ1I1lxv3S87ht3FAIZi0XxQa7hnQ9K+Oo5BH7cGO8ZtWe9Ftq6ItdkuDfpsnsRPcR2h158AMWbNs/iptqg==",
+      "dependencies": [
+        "@trpc/server",
+        "typescript"
+      ]
+    },
+    "@trpc/server@11.5.1_typescript@5.9.2": {
+      "integrity": "sha512-KIDzHRS5m8U1ncPwjgtOtPWK9lNO0kYL7b+lnvKXRqowSAQIEC/z6y7g/dkt4Aqv3DKI/STLydt2/afrP1QrxQ==",
+      "dependencies": [
+        "typescript"
+      ]
     },
     "@types/babel__core@7.20.5": {
       "integrity": "sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==",
@@ -4046,6 +4062,9 @@
     "tslib@2.8.1": {
       "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="
     },
+    "tslog@4.9.3": {
+      "integrity": "sha512-oDWuGVONxhVEBtschLf2cs/Jy8i7h1T+CpdkTNWQgdAF7DhRo2G8vMCgILKe7ojdEkLhICWgI1LYSSKaJsRgcw=="
+    },
     "tsx@4.20.5": {
       "integrity": "sha512-+wKjMNU9w/EaQayHXb7WA7ZaHY6hN8WgfvHNQ3t1PnU91/7O8TcTnIhCDYTZwnt8JsO9IBqZ30Ln1r7pPF52Aw==",
       "dependencies": [
@@ -4059,6 +4078,10 @@
     },
     "type-fest@4.41.0": {
       "integrity": "sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA=="
+    },
+    "typescript@5.9.2": {
+      "integrity": "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==",
+      "bin": true
     },
     "ufo@1.6.1": {
       "integrity": "sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA=="
@@ -4505,12 +4528,15 @@
         "npm:@tanstack/router-plugin@^1.112.0",
         "npm:@tanstack/solid-router-devtools@^1.114.1",
         "npm:@tanstack/solid-router@^1.114.1",
+        "npm:@trpc/client@^11.5.1",
+        "npm:@trpc/server@^11.5.1",
         "npm:@types/node@^24.3.1",
         "npm:clerk-solidjs@^2.0.10",
         "npm:prettier@^3.6.2",
         "npm:solid-js@^1.9.5",
         "npm:tailwind-merge@^3.3.1",
         "npm:tailwindcss@^4.1.13",
+        "npm:tslog@^4.9.3",
         "npm:valibot@^1.1.0",
         "npm:vinxi@~0.5.7"
       ]
