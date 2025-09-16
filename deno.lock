@@ -11,6 +11,7 @@
     "npm:@trpc/client@^11.5.1": "11.5.1_@trpc+server@11.5.1__typescript@5.9.2_typescript@5.9.2",
     "npm:@trpc/server@^11.5.1": "11.5.1_typescript@5.9.2",
     "npm:@types/node@^24.3.1": "24.3.1",
+    "npm:@types/ws@^8.18.1": "8.18.1",
     "npm:clerk-solidjs@^2.0.10": "2.0.10_@solidjs+router@0.15.3__solid-js@1.9.9___seroval@1.3.2_@solidjs+start@1.1.7__vinxi@0.5.8___@babel+core@7.28.4___@types+node@24.3.1__seroval@1.3.2__solid-js@1.9.9___seroval@1.3.2__@types+node@24.3.1_solid-js@1.9.9__seroval@1.3.2_vinxi@0.5.8__@babel+core@7.28.4__@types+node@24.3.1_@types+node@24.3.1",
     "npm:prettier@^3.6.2": "3.6.2",
     "npm:solid-js@^1.9.5": "1.9.9_seroval@1.3.2",
@@ -19,7 +20,8 @@
     "npm:tough-cookie@6": "6.0.0",
     "npm:tslog@^4.9.3": "4.9.3",
     "npm:valibot@^1.1.0": "1.1.0",
-    "npm:vinxi@~0.5.7": "0.5.8_@babel+core@7.28.4_@types+node@24.3.1"
+    "npm:vinxi@~0.5.7": "0.5.8_@babel+core@7.28.4_@types+node@24.3.1",
+    "npm:ws@^8.18.3": "8.18.3"
   },
   "npm": {
     "@adraffy/ens-normalize@1.11.0": {
@@ -1647,6 +1649,12 @@
         "@types/braces"
       ]
     },
+    "@types/node@24.2.0": {
+      "integrity": "sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==",
+      "dependencies": [
+        "undici-types@7.10.0"
+      ]
+    },
     "@types/node@24.3.1": {
       "integrity": "sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==",
       "dependencies": [
@@ -1661,6 +1669,12 @@
     },
     "@types/unist@3.0.3": {
       "integrity": "sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q=="
+    },
+    "@types/ws@8.18.1": {
+      "integrity": "sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==",
+      "dependencies": [
+        "@types/node@24.2.0"
+      ]
     },
     "@ungap/structured-clone@1.3.0": {
       "integrity": "sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g=="
@@ -4382,7 +4396,7 @@
     "vite@6.3.6_@types+node@24.3.1_picomatch@4.0.3": {
       "integrity": "sha512-0msEVHJEScQbhkbVTb/4iHZdJ6SXp/AvxL2sjwYQFfBqleHtnCqv1J3sa9zbWz/6kW1m9Tfzn92vW+kZ1WV6QA==",
       "dependencies": [
-        "@types/node",
+        "@types/node@24.3.1",
         "esbuild",
         "fdir",
         "picomatch@4.0.3",
@@ -4394,7 +4408,7 @@
         "fsevents"
       ],
       "optionalPeers": [
-        "@types/node"
+        "@types/node@24.3.1"
       ],
       "bin": true
     },
@@ -4548,6 +4562,7 @@
         "npm:@trpc/client@^11.5.1",
         "npm:@trpc/server@^11.5.1",
         "npm:@types/node@^24.3.1",
+        "npm:@types/ws@^8.18.1",
         "npm:clerk-solidjs@^2.0.10",
         "npm:prettier@^3.6.2",
         "npm:solid-js@^1.9.5",
@@ -4556,7 +4571,8 @@
         "npm:tough-cookie@6",
         "npm:tslog@^4.9.3",
         "npm:valibot@^1.1.0",
-        "npm:vinxi@~0.5.7"
+        "npm:vinxi@~0.5.7",
+        "npm:ws@^8.18.3"
       ]
     }
   }
