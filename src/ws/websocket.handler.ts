@@ -2,10 +2,18 @@ import { eventHandler } from "vinxi/http";
 export default eventHandler({
     handler() {},
     websocket: {
-        async open(peer) {},
-        async message(peer, msg) {},
-        async close(peer, details) {},
-        async error(peer, error) {},
+        async open(peer) {
+            console.log("open", peer.id, peer.websocket.url);
+        },
+        async message(peer, msg) {
+            console.log("msg", peer.id, peer.websocket.url, msg);
+        },
+        async close(peer, details) {
+            console.log("close", peer.id, peer.websocket.url);
+        },
+        async error(peer, error) {
+            console.log("error", peer.id, peer.websocket.url, error);
+        },
     },
 });
 
