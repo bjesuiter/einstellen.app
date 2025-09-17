@@ -1,6 +1,6 @@
 import { Cookie } from "tough-cookie";
 
-export function getCookies(cookieHeader: string | undefined) {
+export function getCookies(cookieHeader: string | undefined | null) {
 	if (!cookieHeader) return undefined;
 	return cookieHeader.split(";").map((cookieString) =>
 		Cookie.parse(cookieString)
@@ -13,7 +13,10 @@ export function getCookies(cookieHeader: string | undefined) {
  * @param name
  * @returns
  */
-export function getCookie(cookieHeader: string | undefined, name: string) {
+export function getCookie(
+	cookieHeader: string | undefined | null,
+	name: string,
+) {
 	return getCookies(cookieHeader)?.find((cookie) => cookie?.key === name);
 }
 
@@ -28,7 +31,4 @@ export function getCookie(cookieHeader: string | undefined, name: string) {
 //     secure: false, //in Produktion muss true stehen für HTTPS
 //     sameSite: "lax",
 //     path: "/", // gültig für alle Routen
-//   });
-//   res.status(200).header({ "Set-Cookie": cookie.toString() }).json({
-//     message: "Login successful",
 //   });
