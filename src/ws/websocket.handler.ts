@@ -1,9 +1,11 @@
 import { eventHandler } from "vinxi/http";
+import { trpcWsServer } from "~/routes/-trpc/trpc-ws.server";
 export default eventHandler({
     handler() {},
     websocket: {
         async open(peer) {
             console.log("open", peer.id, peer.websocket.url);
+            trpcWsServer.emit("connection", peer.websocket);
         },
         async message(peer, msg) {
             console.log("msg", peer.id, peer.websocket.url, msg);
