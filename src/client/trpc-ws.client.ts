@@ -71,7 +71,7 @@ const internalWsClient = createWSClient({
         // bjesuiter: DO NOT use the peerId() signal here, otherwise it might not be available when the websocket is about to initialize!
         // Use this direct trpc call instead!
         const wsInfo = await getWsInfo();
-        return `${wsInfo.wsServerProtocol}://${wsInfo.wsServerHost}?peerId=${wsInfo.peerId}&tabId=${tabId()}`;
+        return `${wsInfo.wsServerProtocol}://${wsInfo.wsServerHost}/ws?peerId=${wsInfo.peerId}&tabId=${tabId()}`;
     },
     onClose: () => {
         if (wsConnected()) {
