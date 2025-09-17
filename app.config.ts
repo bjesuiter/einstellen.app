@@ -16,4 +16,15 @@ export default defineConfig({
       }),
     ],
   },
+  server: {
+    experimental: {
+      websocket: true,
+    },
+  },
+}).addRouter({
+  name: "ws",
+  base: "/ws",
+  type: "http",
+  handler: "./src/ws/websocket.handler.ts",
+  target: "server",
 });
