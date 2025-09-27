@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/solid-router";
 import Counter from "~/components/Counter";
-import { Nav } from '~/components/Nav';
+import { clientOnly } from '@solidjs/start';
+
+const ClientWsTest = clientOnly(() => import("~/client/wsTest"));
 
 export const Route = createFileRoute("/")({
   component: RouteComponent, 
@@ -18,6 +20,7 @@ function RouteComponent() {
         </a>{" "}
         to learn how to build SolidStart apps.
       </p>
+      <ClientWsTest />
     </main>
   );
 }
